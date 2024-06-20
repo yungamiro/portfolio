@@ -1,0 +1,72 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #000000;
+  color: white;
+  position: relative; /* Ensure navbar is positioned relatively */
+  z-index: 10; /* Ensure navbar is above other elements */
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  width: 48px; /* Width of the switch */
+  height: 24px; /* Height of the switch */
+  background-color: #ccc; /* Color of the switch background */
+  border-radius: 12px; /* Half of the switch height */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  margin: 0 5px 0 5px;
+}
+
+.switch:hover {
+  background-color: #b3b3b3; /* Hover color of the switch */
+}
+
+.knob {
+  position: absolute;
+  top: 50%; /* Center knob vertically */
+  left: 0px; /* Initial position of the knob */
+  width: 20px; /* Width of the knob */
+  height: 20px; /* Height of the knob */
+  background-color: white; /* Color of the knob */
+  border-radius: 50%; /* Rounded shape for knob */
+  transition: left 0.3s ease; /* Smooth transition for left movement */
+  transform: translateY(-50%); /* Adjust vertical centering */
+}
+
+.switch-on .knob {
+  left: calc(100% - 22px); /* Position of the knob when switch is on */
+}
+
+.switch-on {
+  background-color: #5cb85c; /* Color of the switch when on */
+}
+
+.switch-off {
+  background-color: #d9534f; /* Color of the switch when off */
+}
+
+.knob svg {
+  width: 16px;
+  height: 16px;
+  color: #fff; /* Color of the knob icon */
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+}

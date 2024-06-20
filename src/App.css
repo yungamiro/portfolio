@@ -1,0 +1,57 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.color-blind {
+  filter: grayscale(100%);
+}
+
+.pages-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: right center;
+  transition: transform 1s ease, opacity 1s ease;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.page .content {
+  padding: 20px;
+}
+
+.page.turned {
+  transform: rotateY(-180deg);
+}
+
+.page.active {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+}
